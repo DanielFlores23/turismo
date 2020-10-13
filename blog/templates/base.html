@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+
+    <title>{% block titulo %}FINDPLACE{% endblock  %}</title>
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body div class="card-panel azul claro-5"></div>
+    
+    <div class="parallax-container">
+      <div class="parallax">
+        <img src="https://www.muycomputer.com/wp-content/uploads/2016/04/Tierra-en-4K.jpg">
+      </div>
+    </div>
+    
+      <nav class="cyan darken-4">
+        <div class="nav-wrapper" >
+          <a href="{% url 'blog:listar_publicaciones' %}" class="brand-logo right">FINDPLACE</a>
+      <ul class="left">
+        <li><a href="{% url 'blog:listar_publicaciones' %}">INICIO</a></li>
+        <li>
+          <a href="" class="dropdown-trigger" data-target="id_afr">
+             | AFRICA | 
+          </a>
+          <ul id="id_afr" class="dropdown-content">
+            <li><a href="{% url 'blog:ver_publicaciones_categoria' 7 %}">EGIPTO</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'blog:ver_publicaciones_categoria' 8 %}">MARRUECOS</a></li> 
+            <li class="divider"></li>           
+          </ul>
+        </li> 
+        <li>
+          <a href="" class="dropdown-trigger" data-target="id_amer">
+            | AMERICA |
+          </a>
+          <ul id="id_amer" class="dropdown-content">
+            <li><a href="{% url 'blog:ver_publicaciones_categoria' 5 %}">BRASIL</a></li> 
+            <li class="divider"></li> 
+            <li><a href="{% url 'blog:ver_publicaciones_categoria' 2 %}">HONDURAS</a></li> 
+            <li class="divider"></li>
+            <li><a href="{% url 'blog:ver_publicaciones_categoria' 6 %}">PERU</a></li>             
+          </ul>
+        </li> 
+        <li>
+          <a href="" class="dropdown-trigger" data-target="id_asi">
+            | ASIA |
+          </a>
+          <ul id="id_asi" class="dropdown-content">
+            <li><a href="{% url 'blog:ver_publicaciones_categoria' 10 %}">CHINA</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'blog:ver_publicaciones_categoria' 9 %}">EMIRATOS ARABES UNIDOS</a></li>  
+            <li class="divider"></li>          
+          </ul>
+        </li>
+        <li>
+          <a href="" class="dropdown-trigger" data-target="id_euro">
+            | EUROPA |
+          </a>
+          <ul id="id_euro" class="dropdown-content">
+            <li><a href="{% url 'blog:ver_publicaciones_categoria' 4 %}">ESPAÑA</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'blog:ver_publicaciones_categoria' 3 %}">ITALIA</a></li> 
+            <li class="divider"></li>
+            <li><a href="{% url 'blog:ver_publicaciones_categoria' 1 %}">FRANCIA</a></li>             
+          </ul>
+        </li>
+        <li>
+          <a href="" class="dropdown-trigger" data-target="id_oce">
+            | OCEANIA |
+          </a>
+          <ul id="id_oce" class="dropdown-content">
+            <li><a href="{% url 'blog:ver_publicaciones_categoria' 11 %}">AUSTRALIA</a></li>
+            <li class="divider"></li>
+             <li><a href="{% url 'blog:ver_publicaciones_categoria' 13 %}">AUSTRALIA</a></li>             
+          </ul>
+        </li>   
+      </ul>
+      </div>
+    </nav>
+
+
+    <div class="container" style="padding-bottom:2em;">
+
+        {% block cuerpo %}
+        
+        {% endblock %}
+        
+    </div>  
+
+    <div align="center" class="slider">
+      <ul class="slides">
+        <li>
+          <img class="responsive-img" src="https://www.fondosdepantalla.top/wp-content/uploads/2016/06/las-siete-maravillas-del-mundo-en-4k-cristo-redentor-3-Fondosdepantalla.top_.jpg">
+          <div class="caption left-align">
+            <h3>
+              CRISTO REDENTOR
+            </h3>
+            <h4>BRASIL</h4>
+        </li>
+        
+        <li>
+          <img class="responsive-img" src="https://i.pinimg.com/originals/89/e9/78/89e978450476e9f0c5056f16773dbfc8.jpg">
+          <div class="caption right-align">
+            <h3>
+              COLISEO DE ROMA
+            </h3>
+            <h4>ITALIA</h4>
+        </li>
+        <li>
+          <img class="responsive-img" src="https://images7.alphacoders.com/503/thumb-1920-503894.jpg">
+          <div class="caption left-align">
+            <h3>
+              CIUDAD DE PETRA
+            </h3>
+            <h4>JORDANIA</h4>
+        </li>
+        <li>
+          <img class="responsive-img" src="https://free4kwallpapers.com/uploads/originals/2020/07/18/taj-mahal-agra-india-wallpaper.jpg">
+          <div class="caption right-align">
+            <h3>
+              TAJ MAHAL
+            </h3>
+            <h4>INDIA</h4>
+        </li>
+        <li>
+          <img class="responsive-img" src="https://wallpaperaccess.com/full/652483.jpg">
+          <div class="caption left-align">
+            <h3>
+              MACHU PICCHU
+            </h3>
+            <h4>PERUA</h4>
+        </li>
+        <li>
+          <img class="responsive-img" src="https://images5.alphacoders.com/587/587948.jpg">
+          <div class="caption right-align">
+            <h3>
+              LA PIRAMIDE DE CHICHEN ITZA
+            </h3>
+            <h4>MEXICO</h4>
+        </li>
+        <li>
+          <img class="responsive-img" src="https://images7.alphacoders.com/901/901772.jpg">
+          <div class="caption left-align">
+            <h3>
+              LA GRAN MURALLA CHINA
+            </h3>
+            <h4>CHINA</h4>
+        </li>
+        </li>
+        </li>
+       </ul>
+     </div>
+     <hr size="100" color="black">
+
+      
+
+        
+
+        
+
+
+    
+      <div align="center" style="padding:2em;">
+       Sitio Web Creado Por: Daniel Flores 
+      </div>
+    </div>
+
+    
+
+   
+
+  </body>
+    <!-- Compiled and minified JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+              M.AutoInit();
+              });
+    </script>
+
+    <script>
+      var options={
+        height:700
+
+      };
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.slider');
+        var instances = M.Slider.init(elems, options);
+        });
+      //M.AutoInit();
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.parallax');
+      var instances = M.Parallax.init(elems, options);
+    });
+    </script>

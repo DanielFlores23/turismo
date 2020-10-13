@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block titulo %}FINDPLACE{% endblock  %}
+
+{% block cuerpo %}
+	{% if categoria %}
+		
+		<h1  align="center" class="card-panel cyan darken-4 white-text hoverable">IMAGENES DE {{ categoria.descripcion }}</h1>
+		
+	    {% for new in categoria.publicacion_set.all %}
+	        <div>
+    	        <a href="{% url 'blog:ver_publicacion' new.id %}">	
+            		<h2  align="center" class=" purple-text">{{ new.titulo }}</h2>
+            	</a>
+            </div>	
+            <div align="center">
+            	{{ new.contenido|truncatechars:250 }} <br>
+            	<img class="responsive-img"  src=" {{ new.imagen.url }}" height="10000">
+        	</div>
+        	<hr size="100" color="black">
+	    {% endfor %}
+	{% endif %}
+{% endblock %}

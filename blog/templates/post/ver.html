@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block titulo%} {{pub.titulo|truncatechars:30}} {% endblock %}
+
+{% block cuerpo %}
+	
+	<div align="center"   class="cyan darken-4">
+	<h1 class="white-text text-darken-2">{{ pub.titulo }}</h1>
+	</div>
+	<p align="left">
+		{{ pub.contenido }}
+		<img class="responsive-img" src=" {{ pub.imagen.url }}" height="2000">
+		 
+	</p>
+	
+	{{ pub.autor.get_full_name }} publicado: {{ pub.f_pub }}
+
+	
+
+<!-- AddToAny BEGIN -->
+	<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+		<a class="a2a_button_facebook"></a>
+		<a class="a2a_button_twitter"></a>
+		<a class="a2a_button_email"></a>
+		<a class="a2a_button_whatsapp"></a>
+		<a class="a2a_button_telegram"></a>
+	</div>
+	
+{% endblock %}
